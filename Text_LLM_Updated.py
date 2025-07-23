@@ -37,7 +37,7 @@ ohlc_df.to_csv("ohlc_data_cleaned.csv", index=False)
 
 # Function to fetch news from Finnhub
 def get_finnhub_news(ticker, start_date, end_date):
-    FINNHUB_API_KEY = "cudomf9r01qiosq0olk0cudomf9r01qiosq0olkg"
+    FINNHUB_API_KEY = ""
     url = f"https://finnhub.io/api/v1/company-news?symbol={ticker}&from={start_date}&to={end_date}&token={FINNHUB_API_KEY}"
     response = requests.get(url).json()
 
@@ -220,7 +220,7 @@ merged_df.to_csv("technical_indicators_dataset.csv", index=False)
 
 
 # Set up Google Gemini API Key
-genai.configure(api_key="AIzaSyDsqfG6sKuJnNnc71Sj_vhBuDjGfFj1Sds")
+genai.configure(api_key="")
 
 # Function to generate structured LLM prompts
 def create_prompt(row):
